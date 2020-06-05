@@ -15,12 +15,37 @@
 
 <br>
 
-> ## 데모사이트
+> ## 프로젝트 소개
 
-- 추후 업로드 예정
+‘한국어 발음교정 서비스’를 위한 발음대로 인식되는 음성인식기 개발 프로젝트이다. 외부 API음성인식기는 Language Modeling을 장착하여 발음이 아닌 문맥에 따라 단어를 보정하여 보내준다. 하지만 발음 교정 서비스는 들리는 대로 앞뒤 문맥에 따른 교정 없이 출력을 내야한다. 
+Ex) 해돋이 -> 해도지,  쇠철찰살 -> 쇠철찰살 
+딥러닝과 CTC알고리즘을 통해 음성인식기를 개발하고자 한다.
+
+![image](https://user-images.githubusercontent.com/37397737/83869519-ad594400-a767-11ea-9f63-5e237ef435c4.png)
+
+
+> ## 주요 기술 및 실험
+
+- CTC 알고리즘을 기반으로 여러가지 실험
+  - 약 100GB의 음성 데이터 Data Augmentaion / Data Cleaning / Preprocessing / Feature Extraction
+  - 레이어 변경 및 하이퍼 파라미터 변경
+
+- CTC알고리즘: 주어진 X에 대해 y의 가능성을 학습<br>
+입력시퀀스와 출력시퀀스만 가지고 학습 가능<br>
+길이나 정렬 비율 상관없이 학습이 가능하다.
+
+![image](https://user-images.githubusercontent.com/37397737/83869662-e1cd0000-a767-11ea-98a8-c5ee634b0166.png)
+
+
+> ## 결과
+
+- CER(Charcter Error Rate)을 기준으로 진행
+  - CER: 각 자모가 얼마나 틀렸는지의 비율
+- CER 0.2 이하의 수치를 기록 Language Modeling없이 진행하여 현 논문 급의 수치를 기록하였다.
+
+- 랜덤으로 뽑은 10개의 결과
+![image](https://user-images.githubusercontent.com/37397737/83869872-383a3e80-a768-11ea-96ef-64ee1f2c8600.png)
+
 
 <br>
 
-> ## 소개영상 & 사용방법
-
-- 추후 업로드 예정
